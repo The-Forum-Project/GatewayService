@@ -9,14 +9,16 @@ spring:
           uri: lb://user-service # service name
           predicates:
             - Path=/user-service/** # url pattern
-        - id: housing-service
-          uri: lb://housing-service
+
+        - id: file-service
+          uri: lb://file-service
           predicates:
-            - Path=/housing-service/**
-        - id: composite-service
-          uri: lb://composite-service
+            - Path=/file-service/**
+
+        - id: post-reply-service
+          uri: lb://post-reply-service
           predicates:
-            - Path=/composite-service/**
+            - Path=/post-reply-service/**
 
 server:
   port: 9000

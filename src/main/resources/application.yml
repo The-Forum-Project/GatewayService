@@ -10,6 +10,16 @@ spring:
           predicates:
             - Path=/user-service/** # url pattern
 
+        - id: file-service
+          uri: lb://file-service
+          predicates:
+            - Path=/file-service/**
+
+        - id: post-reply-service
+          uri: lb://post-reply-service
+          predicates:
+            - Path=/post-reply-service/**
+
 server:
   port: 9000
 
