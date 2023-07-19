@@ -20,6 +20,12 @@ spring:
           predicates:
             - Path=/post-reply-service/**
 
+        - id: message-service
+          uri: lb://message-service
+          predicates:
+            - Path=/message-service/**
+
+
 server:
   port: 9000
 
