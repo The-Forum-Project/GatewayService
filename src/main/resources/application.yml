@@ -25,6 +25,11 @@ spring:
           predicates:
             - Path=/message-service/**
 
+        - id: history-service
+          uri: lb://history-service
+          predicates:
+            - Path=/history-service/**
+
 
 server:
   port: 9000
