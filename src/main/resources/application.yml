@@ -35,6 +35,10 @@ spring:
           predicates:
             - Path=/post-composite-service/**
 
+        - id: authentication-service
+          uri: lb://authentication-service
+          predicates:
+            - Path=/authentication-service/**
 
 server:
   port: 9000
