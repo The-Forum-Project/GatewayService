@@ -30,6 +30,11 @@ spring:
           predicates:
             - Path=/history-service/**
 
+        - id: post-composite-service
+          uri: lb://post-composite-service
+          predicates:
+            - Path=/post-composite-service/**
+
 
 server:
   port: 9000
