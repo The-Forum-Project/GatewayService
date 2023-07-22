@@ -35,6 +35,11 @@ spring:
           predicates:
             - Path=/post-composite-service/**
 
+        - id: user-composite-service
+          uri: lb://user-composite-service
+          predicates:
+            - Path=/user-composite-service/**
+
         - id: authentication-service
           uri: lb://authentication-service
           predicates:
